@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "motion/react"
 
 const skills = [
   {
@@ -37,15 +38,31 @@ const skills = [
     description: "MongoDB is a NoSQL database, used for flexible, schema-less data storage. You’re familiar with its basic operations and integrating it with backend applications.",
     percentage: 60,
   },
+  {
+    name: "Express.js",
+    img: "ex.webp",
+    description: "Express.js is a minimal and flexible Node.js web application framework. You use it to build APIs, handle middleware, and manage backend routing efficiently.",
+    percentage: 40,
+  },
+  {
+    name: "Next.js",
+    img: "avf4qeujo.webp",
+    description: "Next.js is a React framework for building server-rendered applications. You’re experienced with its features like file-based routing, API routes, and server-side rendering for performance optimization.",
+    percentage: 40,
+  },
 ];
+
 
 const SkillSection = () => {
   return (
     <section className="py-16 bg-transparent text-white">
       <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">My Skills</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4 sm:px-12  mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4  mx-auto">
         {skills.map((skill, index) => (
-          <div
+          <motion.div
+          initial={{ opacity: 0, y: 150 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 1}}
             key={index}
             className="p-6 bg-black rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
@@ -54,7 +71,7 @@ const SkillSection = () => {
               alt={skill.name}
               className="size-24 rounded-full mx-auto mb-4"
             />
-            <h3 className="text-xl font-semibold mb-2">{skill.name}</h3>
+            <h3 className="text-xl font-semibold text-orange-500 mb-2">{skill.name}</h3>
             <p className="text-gray-300 mb-4">{skill.description}</p>
 
             {/* Progress bar */}
@@ -71,7 +88,7 @@ const SkillSection = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

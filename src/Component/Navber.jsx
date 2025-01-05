@@ -9,7 +9,7 @@ function Navber() {
 
   return (
     <>
-      <nav className="w-11/12 mx-auto border-b-2 sticky top-0 bg-black text-white items-center py-3 font-semibold flex justify-between">
+      <nav className="w-11/12 mx-auto border-b-2 sticky top-0 z-30 bg-black text-white items-center py-3 font-semibold flex justify-between">
         <h1 className="text-3xl">
           MR.<span className="text-orange-600">coder</span>
         </h1>
@@ -40,7 +40,7 @@ function Navber() {
           </li>
           <li>
             <NavLink
-              to="/resumi"
+              to="https://docs.google.com/document/d/1RbeBl3wMITRuYtjS_HIMr2EQk_oYywFsUOnnhyLVYC8/edit?tab=t.0"
               className={({ isActive }) =>
                 isActive
                   ? "font-bold p-2 bg-orange-600 rounded-md text-white"

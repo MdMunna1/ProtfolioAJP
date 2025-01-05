@@ -1,14 +1,20 @@
 import React from "react";
+import { motion } from "motion/react"
 
 const AboutMe = () => {
   return (
     <>
        <div className="text-center my-6 bg-gradient-to-b from-black/50 to-black py-4">
-        <h1 className="text-white sm:text-4xl text-2xl font-bold py-8">
+        <h1 className="text-orange-600 sm:text-4xl text-2xl font-bold py-8">
           About Me
         </h1>
 
-        <section className="grid mt-4 sm:grid-cols-2 gap-6 px-4">
+        <motion.section
+         initial={{ opacity: 0, y: 200 }} 
+         whileInView={{ opacity: 1, y: 0 }} 
+         transition={{ duration: 1}}
+        
+        className="grid mt-4 sm:grid-cols-2 gap-6 px-4">
           {/* Education Card */}
           <div
             className="p-2 rounded-lg border-l-4 border-orange-600 bg-transparent shadow-[0_4px_10px_rgba(255,255,255,0.6)] hover:shadow-[0_6px_15px_rgba(255,255,255,0.8)] transition-shadow duration-300"
@@ -42,7 +48,7 @@ const AboutMe = () => {
               and continuous learning.
             </p>
           </div>
-        </section>
+        </motion.section>
 
         {/* Button */}
         <button className="text-white mt-7 rounded-tr-2xl rounded-bl-2xl bg-orange-600 sm:text-2xl font-bold py-2 px-6 hover:bg-orange-700 transition-colors duration-300">

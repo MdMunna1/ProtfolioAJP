@@ -50,7 +50,7 @@ const Footer = () => {
                 </a>
               </div>
             </nav>
-            <aside>
+            <aside className="break-words">
               <p>
                 Copyright © {new Date().getFullYear()} - All right reserved by
                 ACME Industries Ltd

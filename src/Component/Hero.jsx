@@ -70,12 +70,14 @@ const Hero = () => {
             </div>
           </motion.div>
         </div>
-        <div className="flex h-full justify-center items-center">
+        <motion.div  initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }} className="flex h-full justify-center items-center">
           <img className=" h-[400px] w-[400px] rounded-full object-cover "
             src={munna}
             alt=""
           />
-        </div>
+        </motion.div>
       </section>
     </>
   );
