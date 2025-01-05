@@ -2,8 +2,10 @@ import React from "react";
 import { ReactTyped } from "react-typed";
 import { motion } from "motion/react";
 import { FaGithub } from "react-icons/fa6";
+// import { motion } from "motion/react"
 import { FaFacebookSquare, FaLinkedin } from "react-icons/fa";
 import munna from "../assets/munna.jpg";
+import { NavLink } from "react-router-dom";
 const Hero = () => {
   return (
     <>
@@ -42,7 +44,7 @@ const Hero = () => {
                 loop={true}
               />
             </h2>
-            <div className="pl-4 flex gap-3">
+            <div className="pl-4 flex items-center gap-3">
               <a
                 href="https://github.com/MdMunna1"
                 target="_blank"
@@ -67,6 +69,19 @@ const Hero = () => {
               >
                 <FaLinkedin size={30} />{" "}
               </a>
+              <motion.p   whileHover={{ scale: 1.1 }}
+  whileTap={{ scale: 0.95 }}>
+            <NavLink
+              to="https://docs.google.com/document/d/1RbeBl3wMITRuYtjS_HIMr2EQk_oYywFsUOnnhyLVYC8/edit?tab=t.0"
+              className={({ isActive }) =>
+                isActive
+                  ? "font-bold p-2 bg-orange-600 rounded-md text-white"
+                  : "font-bold p-2 border border-orange-500 text-white hover:bg-orange-500 rounded-md duration-300"
+              }
+            >
+              Resumi
+            </NavLink>
+          </motion.p>
             </div>
           </motion.div>
         </div>

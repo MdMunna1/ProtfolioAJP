@@ -82,7 +82,7 @@ const ContactMe = () => {
         </div>
 
         {/* Contact Details Section */}
-        <div className="bg-black/60 p-6 rounded-lg shadow-lg flex-1">
+        <div className="bg-black/60 text-center p-6 rounded-lg shadow-lg flex-1">
           <h3 className="sm:text-2xl font-semibold mb-6 underline">
             Contact Information
           </h3>
