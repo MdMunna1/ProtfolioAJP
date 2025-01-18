@@ -40,7 +40,7 @@ function Navber() {
           </li>
           <li>
             <NavLink
-              to="https://docs.google.com/document/d/1RbeBl3wMITRuYtjS_HIMr2EQk_oYywFsUOnnhyLVYC8/edit?tab=t.0"
+              to="https://drive.google.com/file/d/1SA-6PZ_0b8keXaelS7mpUtycjveuQc82/view"
               className={({ isActive }) =>
                 isActive
                   ? "font-bold p-2 bg-orange-600 rounded-md text-white"
@@ -98,7 +98,7 @@ function Navber() {
           </li>
           <li>
             <NavLink
-              to="/resumi"
+              to="https://drive.google.com/file/d/1SA-6PZ_0b8keXaelS7mpUtycjveuQc82/view"
               className={({ isActive }) =>
                 isActive
                   ? "font-bold p-2 bg-orange-600 rounded-md text-white"

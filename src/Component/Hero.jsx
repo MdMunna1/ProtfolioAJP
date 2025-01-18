@@ -4,12 +4,12 @@ import { motion } from "motion/react";
 import { FaGithub } from "react-icons/fa6";
 // import { motion } from "motion/react"
 import { FaFacebookSquare, FaLinkedin } from "react-icons/fa";
-import munna from "../assets/munna.jpg";
+import munna from "../assets/munnare.jpg";
 import { NavLink } from "react-router-dom";
 const Hero = () => {
   return (
     <>
-      <section className=" sm:grid sm:h-[500px] sm:grid-cols-2 gap-5">
+      <section className=" sm:grid sm:h-[500px] sm:grid-cols-2  pt-8 sm:pt-0 gap-5">
         <div>
           <motion.div
             initial={{ scale: 0 }}
@@ -72,7 +72,7 @@ const Hero = () => {
               <motion.p   whileHover={{ scale: 1.1 }}
   whileTap={{ scale: 0.95 }}>
             <NavLink
-              to="https://docs.google.com/document/d/1RbeBl3wMITRuYtjS_HIMr2EQk_oYywFsUOnnhyLVYC8/edit?tab=t.0"
+              to="https://drive.google.com/file/d/1SA-6PZ_0b8keXaelS7mpUtycjveuQc82/view"
               className={({ isActive }) =>
                 isActive
                   ? "font-bold p-2 bg-orange-600 rounded-md text-white"
@@ -87,7 +87,7 @@ const Hero = () => {
         </div>
         <motion.div  initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }} className="flex h-full justify-center items-center">
+            transition={{ duration: 0.8, ease: "easeOut" }} className="flex   sm:border-l-2 h-full justify-center items-center">
           <img className=" h-[400px] w-[400px] rounded-full object-cover "
             src={munna}
             alt=""

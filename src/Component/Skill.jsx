@@ -55,43 +55,80 @@ const skills = [
 
 const SkillSection = () => {
   return (
-    <section className="py-16 bg-transparent text-white">
-      <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">My Skills</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4  mx-auto">
-        {skills.map((skill, index) => (
-          <motion.div
-          initial={{ opacity: 0, y: 150 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 1}}
-            key={index}
-            className="p-6 bg-black rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-          >
-            <img
-              src={skill.img}
-              alt={skill.name}
-              className="size-24 rounded-full mx-auto mb-4"
-            />
-            <h3 className="text-xl font-semibold text-orange-500 mb-2">{skill.name}</h3>
-            <p className="text-gray-300 mb-4">{skill.description}</p>
+    // <section className="py-16 bg-transparent text-white">
+    //   <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">My Skills</h2>
+    //   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4  mx-auto">
+    //     {skills.map((skill, index) => (
+    //       <motion.div
+    //       initial={{ opacity: 0, y: 150 }} 
+    //       whileInView={{ opacity: 1, y: 0 }} 
+    //       transition={{ duration: 1}}
+    //         key={index}
+    //         className="p-6 bg-black rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+    //       >
+    //         <img
+    //           src={skill.img}
+    //           alt={skill.name}
+    //           className="size-24 rounded-full mx-auto mb-4"
+    //         />
+    //         <h3 className="text-xl font-semibold text-orange-500 mb-2">{skill.name}</h3>
+    //         <p className="text-gray-300 mb-4">{skill.description}</p>
 
-            {/* Progress bar */}
-            <div className="relative pt-1">
-              <div className="flex mb-2 items-center justify-between">
-                <span className="text-sm font-semibold">{skill.percentage}%</span>
-              </div>
-              <div className="flex mb-2 items-center justify-between">
-                <div className="w-full bg-gray-200 rounded-full h-2.5">
-                  <div
-                    className={`bg-orange-600 h-2.5 rounded-full`}
-                    style={{ width: `${skill.percentage}%` }}
-                  ></div>
-                </div>
+    //         {/* Progress bar */}
+    //         <div className="relative pt-1">
+    //           <div className="flex mb-2 items-center justify-between">
+    //             <span className="text-sm font-semibold">{skill.percentage}%</span>
+    //           </div>
+    //           <div className="flex mb-2 items-center justify-between">
+    //             <div className="w-full bg-gray-200 rounded-full h-2.5">
+    //               <div
+    //                 className={`bg-orange-600 h-2.5 rounded-full`}
+    //                 style={{ width: `${skill.percentage}%` }}
+    //               ></div>
+    //             </div>
+    //           </div>
+    //         </div>
+    //       </motion.div>
+    //     ))}
+    //   </div>
+    // </section>
+    <section className="py-16 bg-transparent  text-white">
+    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">My Skills</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4  mx-auto">
+      {skills.map((skill, index) => (
+        <motion.div
+        initial={{ opacity: 0, y: 150 }} 
+        whileInView={{ opacity: 1, y: 0 }} 
+        transition={{ duration: 1}}
+          key={index}
+          className="p-6 h-full flex flex-col bg-black rounded-lg shadow-lg hover:shadow-white transition-shadow duration-300"
+        >
+          <img
+            src={skill.img}
+            alt={skill.name}
+            className="size-24 rounded-full mx-auto mb-4"
+          />
+          <h3 className="text-xl font-semibold text-orange-500 mb-2">{skill.name}</h3>
+          <p className="text-gray-300 flex-grow mb-4">{skill.description}</p>
+
+          {/* Progress bar */}
+          <div className="relative pt-1">
+            <div className="flex mb-2 items-center justify-between">
+              <span className="text-sm font-semibold">{skill.percentage}%</span>
+            </div>
+            <div className="flex mb-2 items-center justify-between">
+              <div className="w-full bg-gray-200 rounded-full h-2.5">
+                <div
+                  className={`bg-orange-600 h-2.5 rounded-full`}
+                  style={{ width: `${skill.percentage}%` }}
+                ></div>
               </div>
             </div>
-          </motion.div>
-        ))}
-      </div>
-    </section>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  </section>
   );
 };
 
